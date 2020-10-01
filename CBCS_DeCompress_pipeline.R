@@ -25,7 +25,7 @@ decompressed.cbcs = expandTarget(cbcs,
                                  cs.cbcs$compression_mat)
 
 ### STEP 4: run ensemble deconvolution
-decompress.res = bestDeconvolution(yref,
+decompress.res = bestDeconvolution(decompressed.cbcs,
                                    n.types = 5,
                                    scree = 'cumvar',
                                    logTransform = F,
