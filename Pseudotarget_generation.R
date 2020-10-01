@@ -65,7 +65,7 @@ for (s in c(200, 500, 800)){
         iii = getGenesbyCV(exp)$Index
         samp = sample(iii,s)
         o.mix = exp[samp,]
-        t.mix = log(exp(exp[iii,]) * abs(matrix(rnorm(nrow(exp[iii,])*ncol(exp[iii,])),nrow=nrow(exp[iii,]))))
+        t.mix = log(exp(exp[iii,]) * abs(matrix(rnorm(nrow(exp[iii,])*ncol(exp[iii,]),sd=2),nrow=nrow(exp[iii,]))))
         t.prop = truth
         lll = rlist::list.append(lll,
                                  list(observed.mixed = o.mix,
